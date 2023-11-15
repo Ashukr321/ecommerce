@@ -5,7 +5,8 @@ const colors = require('colors');
 const path = require('path');
 
 const morgan = require('morgan');
-const  CoonnectDb = require('./config/db')
+const  CoonnectDb = require('./config/db');
+const router = require('./routes/authRoute');
 
 
 // configure env 
@@ -22,7 +23,10 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(morgan('dev'));
 
-//routes
+// routes  this is work like middilewares
+app.use('/api/v1/auth',router);
+
+//rest api 
 app.get('/',(req,res)=>{
   res.render(__dirname+path.join('/views/index.ejs'));
 })
