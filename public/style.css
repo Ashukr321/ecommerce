@@ -1,0 +1,22 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  --webkit-font-smoothing:antialiased;
+}
+body{
+  height:100vh;
+  background-color:#000;
+  display: grid;
+  place-items: center;
+}
+
+h1{
+  font-size:3.5vw;
+  text-align:center;
+  color:white;
+  text-transform:capitalize;
+  letter-spacing:.1em;
+  text-shadow: 1px 1px 5px #da1a1a;
+}
+
